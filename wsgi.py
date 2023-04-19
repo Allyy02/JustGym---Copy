@@ -1,10 +1,9 @@
-import click, pytest, sys
+import click, pytest, sys, json
 from flask import Flask
 from flask.cli import with_appcontext, AppGroup
-
 from App.database import db, get_migrate
-from App.main import create_app,login_manager
-from App.controllers import ( create_user, get_all_users_json, get_all_users,add_exercise, add_workout)
+from App.main import create_app
+from App.controllers import ( create_user, get_all_users_json, get_all_users,add_exercise, add_workout, add_exerciseData, get_all_exercises_json, add_allExerciseData)
 from datetime import date
 
 # This commands file allow you to create convenient CLI commands for testing controllers
